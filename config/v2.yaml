@@ -1,0 +1,48 @@
+# AlderIPM v2 - climate-driven, site-specific configuration
+version: "2.0.0"
+seed: 42
+
+# Reference site: the calibrated baseline parameter set of Ghosh & Singh (2026) is
+# anchored to this site's ERA5 baseline climate, so that at the reference site every
+# climate-driven parameter equals its calibrated value exactly.
+reference_site: neusiedler
+
+sites_file: data/alder_sites_v1.json      # 41 Natura 2000 (91E0*) alder sites shipped with AlderIPM-Sim v1
+
+europe_box: {xmin: -12.0, xmax: 32.0, ymin: 35.0, ymax: 67.0}   # ERA5 daily climatology subset
+grid_resolution_deg: 1.0                 # resolution of the optional gridded run
+
+scenarios: [baseline, ssp245, ssp585]
+climate:
+  baseline: {dataset: "WeatherBench 2 ERA5 climatology 1990-2019, 0.25 deg", years: [1990, 2019]}
+  cmip6:
+    models: [GFDL-ESM4, IPSL-CM6A-LR, MPI-ESM1-2-HR, MRI-ESM2-0]   # ISIMIP3b primary GCMs
+    member: r1i1p1f1
+    historical_years: [1985, 2014]
+    future_years: [2041, 2070]
+    experiments: {ssp245: ssp245, ssp585: ssp585}
+
+# Climate -> phenological-parameter mapping (pipeline/param_map.py). Every mapping is
+# monotone, anchored at the calibrated value at the reference site and clipped to the
+# AlderIPM-Sim PARAM_REGISTRY range. Slopes are literature-informed assumptions and are
+# varied in the uncertainty analysis (slope_cv).
+mapping:
+  T:        {driver: gsl10,  mode: proportional, elasticity: 0.5,  slope_cv: 0.4}   # season length  (paper phenology #1); half-elastic to days > 10 C
+  sigma_A:  {driver: winter_T, mode: logit_linear, slope_per_C: 0.30, slope_cv: 0.5} # beetle overwinter survival (#2)
+  sigma_F:  {driver: winter_T, mode: logit_linear, slope_per_C: 0.30, slope_cv: 0.5} # parasitoid overwinter survival (#3)
+  delta:    {driver: T_MJJ,  mode: degree_day,   T0_C: 8.0,       slope_cv: 0.3}   # parasitoid development rate (#4)
+  # Bird pressure (#6): the GBIF passerine/Aves reporting ratio is dominated by observer culture (e.g. wetland
+  # birding hotspots report few passerines), so it is NOT used by default; B_index stays at its calibrated value.
+  B_index:  {driver: bird_ratio, mode: proportional, elasticity: 0.5, slope_cv: 0.5, source: gbif, enabled: false}
+
+gbif:
+  radius_km: 25          # counts of alder / beetle / parasitoid records around each site
+  phenology_radius_km: 100
+  years: [2000, 2026]
+  domain_min_records: 3  # gridded alder presence domain: >= 3 A. glutinosa records per 0.25 deg cell
+  generalist_passerines: ["Parus major", "Cyanistes caeruleus", "Sylvia atricapilla", "Erithacus rubecula", "Turdus merula", "Fringilla coelebs", "Phylloscopus collybita", "Sitta europaea"]
+
+stability:
+  years: 200             # annual-map iterations from the coexistence reference initial condition
+  lhs_samples: 80        # uncertainty samples per site x scenario (climate-driven parameters only)
+  control: true          # run the three management strategies (A, B, C) per site x scenario

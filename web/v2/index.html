@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlderIPM-Sim v2 — climate scenarios for 41 European alder sites</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root { --bg:#edf1e7; --surface:#fbfcf8; --border:#d4ddc7; --text:#16251a; --muted:#55684f; --primary:#2f6b4f; --gold:#c2922f; --danger:#b01722; --warn:#cf9418; --ok:#1f8a44; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+  header { background:linear-gradient(135deg,#12301d,#1d4a2e 55%,#2f6b4f); color:#fff; padding:16px 24px; border-bottom:2px solid var(--gold); }
+  header h1 { margin:0; font-size:1.4rem; } header p { margin:4px 0 0; opacity:.85; font-size:.9rem; }
+  main { max-width:1300px; margin:0 auto; padding:18px 24px 40px; }
+  .row { display:grid; grid-template-columns: 1fr 1fr; gap:18px; } @media (max-width:900px){ .row { grid-template-columns:1fr; } }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 16px; }
+  .scn { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px; }
+  .scn button, .btn { font:inherit; font-weight:600; padding:7px 14px; border-radius:999px; border:1px solid var(--border); background:#fff; cursor:pointer; }
+  .scn button.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+  .btn.primary { background:var(--primary); color:#fff; border-color:var(--primary); }
+  #map { height:460px; border-radius:10px; border:1px solid var(--border); }
+  .legend { font-size:.8rem; color:var(--muted); margin-top:6px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .sw { display:inline-block; width:12px; height:12px; border-radius:50%; border:1px solid #333; vertical-align:middle; }
+  table { width:100%; border-collapse:collapse; font-size:.85rem; } th, td { padding:5px 8px; border-bottom:1px solid var(--border); text-align:left; } th { color:var(--muted); font-weight:600; }
+  td.num { font-variant-numeric:tabular-nums; text-align:right; } th.num { text-align:right; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
+  .chip { background:rgba(47,107,79,.08); border-radius:8px; padding:6px 10px; min-width:90px; text-align:center; }
+  .chip b { display:block; font-size:1rem; } .chip span { font-size:.7rem; color:var(--muted); }
+  .badge { display:inline-block; padding:2px 10px; border-radius:999px; font-size:.75rem; font-weight:700; color:#fff; }
+  .muted { color:var(--muted); font-size:.85rem; }
+  h2 { font-size:1.1rem; margin:0 0 8px; } h3 { font-size:.95rem; margin:14px 0 6px; }
+  #charts { display:grid; grid-template-columns:1fr 1fr; gap:8px; } #charts > div { height:220px; }
+  .delta { color:var(--muted); font-size:.75rem; }
+  footer { max-width:1300px; margin:0 auto; padding:0 24px 40px; font-size:.8rem; color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>AlderIPM-Sim v2 · climate scenarios</h1>
+  <p>Site-specific phenological parameters derived from ERA5 (1990–2019) and CMIP6 (SSP2-4.5 / SSP5-8.5, 2041–2070), fed into the unchanged AlderIPM-Sim engine. Companion to Ghosh &amp; Singh (2026).</p>
+</header>
+<main>
+  <div class="scn" id="scn"></div>
+  <div class="scn" id="layers"></div>
+  <p class="muted" id="gridnote"></p>
+  <div class="row">
+    <div class="card">
+      <h2>Black-alder presence domain (GBIF) and the 41 reference sites</h2>
+      <div id="map"></div>
+      <div class="legend"><span>P<sub>shift</sub> (climate-conditional regime-shift probability):</span>
+        <span><i class="sw" style="background:#1a9850"></i> 0</span><span><i class="sw" style="background:#fee08b"></i> 0.5</span><span><i class="sw" style="background:#d73027"></i> 1</span>
+        <span>· ring = attractor of the central run (green coexistence, amber parasitoid-free, blue canopy-only, grey beetle-free)</span><span>· raster = same classes / ρ* (0.3 light → 1.0 dark) for every alder cell</span></div>
+    </div>
+    <div class="card" id="site">
+      <h2>Select a site on the map</h2>
+      <p class="muted">Each marker carries the ERA5/CMIP6 climate drivers, the mapped parameters (T, σ<sub>A</sub>, σ<sub>F</sub>, δ, B<sub>index</sub>) and precomputed stability metrics for the chosen scenario. "Run live" re-simulates the site in your browser with the same engine as the main app.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px" id="live" hidden>
+    <h2 id="live-title">Live simulation</h2>
+    <div id="charts"><div id="cA"></div><div id="cF"></div><div id="cK"></div><div id="cD"></div></div>
+  </div>
+</main>
+<footer id="foot"></footer>
+<script src="../js/parameters.js"></script>
+<script src="../js/model.js"></script>
+<script src="../js/control.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="v2.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+numpy
+pandas
+xarray>=2024.1
+zarr>=3.0
+fsspec
+aiohttp
+requests
+netCDF4
+dask
+scipy
+pyyaml
+matplotlib
+mapbox-vector-tile
+pillow

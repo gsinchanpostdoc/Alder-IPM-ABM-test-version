@@ -1,0 +1,37 @@
+{
+ "api": "GBIF occurrence search API (no download DOI; register a derived dataset before publication)",
+ "taxonomy": "GBIF Backbone keys via /species/match",
+ "keys": {
+  "Alnus glutinosa": 2876213,
+  "Agelastica alni": 1047936,
+  "Meigenia mutabilis": 1476844,
+  "Parus major": 9705453,
+  "Cyanistes caeruleus": 2487879,
+  "Sylvia atricapilla": 2492956,
+  "Erithacus rubecula": 2492462,
+  "Turdus merula": 2490719,
+  "Fringilla coelebs": 2494422,
+  "Phylloscopus collybita": 2493091,
+  "Sitta europaea": 2484916
+ },
+ "match_types": {
+  "Alnus glutinosa": "EXACT",
+  "Agelastica alni": "EXACT",
+  "Meigenia mutabilis": "EXACT",
+  "Parus major": "EXACT",
+  "Cyanistes caeruleus": "EXACT",
+  "Sylvia atricapilla": "EXACT",
+  "Erithacus rubecula": "EXACT",
+  "Turdus merula": "EXACT",
+  "Fringilla coelebs": "EXACT",
+  "Phylloscopus collybita": "EXACT",
+  "Sitta europaea": "EXACT"
+ },
+ "years": [
+  2000,
+  2026
+ ],
+ "radius_km": 25,
+ "phenology_radius_km": 100,
+ "retrieved_utc": "2026-10-24 22:44:58"
+}

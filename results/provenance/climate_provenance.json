@@ -1,0 +1,351 @@
+{
+ "baseline": {
+  "dataset": "WeatherBench 2 ERA5 climatology 1990-2019, 0.25 deg",
+  "url": "https://storage.googleapis.com/weatherbench2/datasets/era5-hourly-climatology/1990-2019_6h_1440x721.zarr",
+  "years": [
+   1990,
+   2019
+  ]
+ },
+ "gcms": [
+  {
+   "model": "GFDL-ESM4",
+   "experiment": "historical",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gr1",
+   "zstore": "gs://cmip6/CMIP6/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/Amon/tas/gr1/v20190726/",
+   "years": [
+    1985,
+    2014
+   ]
+  },
+  {
+   "model": "GFDL-ESM4",
+   "experiment": "historical",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gr1",
+   "zstore": "gs://cmip6/CMIP6/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/Amon/pr/gr1/v20190726/",
+   "years": [
+    1985,
+    2014
+   ]
+  },
+  {
+   "model": "GFDL-ESM4",
+   "experiment": "ssp245",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gr1",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp245/r1i1p1f1/Amon/tas/gr1/v20180701/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "GFDL-ESM4",
+   "experiment": "ssp245",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gr1",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp245/r1i1p1f1/Amon/pr/gr1/v20180701/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "GFDL-ESM4",
+   "experiment": "ssp585",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gr1",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp585/r1i1p1f1/Amon/tas/gr1/v20180701/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "GFDL-ESM4",
+   "experiment": "ssp585",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gr1",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp585/r1i1p1f1/Amon/pr/gr1/v20180701/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "IPSL-CM6A-LR",
+   "experiment": "historical",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gr",
+   "zstore": "gs://cmip6/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/Amon/tas/gr/v20180803/",
+   "years": [
+    1985,
+    2014
+   ]
+  },
+  {
+   "model": "IPSL-CM6A-LR",
+   "experiment": "historical",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gr",
+   "zstore": "gs://cmip6/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/Amon/pr/gr/v20180803/",
+   "years": [
+    1985,
+    2014
+   ]
+  },
+  {
+   "model": "IPSL-CM6A-LR",
+   "experiment": "ssp245",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gr",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp245/r1i1p1f1/Amon/tas/gr/v20190119/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "IPSL-CM6A-LR",
+   "experiment": "ssp245",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gr",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp245/r1i1p1f1/Amon/pr/gr/v20190119/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "IPSL-CM6A-LR",
+   "experiment": "ssp585",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gr",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp585/r1i1p1f1/Amon/tas/gr/v20190903/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "IPSL-CM6A-LR",
+   "experiment": "ssp585",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gr",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp585/r1i1p1f1/Amon/pr/gr/v20190903/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "MPI-ESM1-2-HR",
+   "experiment": "historical",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/CMIP/MPI-M/MPI-ESM1-2-HR/historical/r1i1p1f1/Amon/tas/gn/v20190710/",
+   "years": [
+    1985,
+    2014
+   ]
+  },
+  {
+   "model": "MPI-ESM1-2-HR",
+   "experiment": "historical",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/CMIP/MPI-M/MPI-ESM1-2-HR/historical/r1i1p1f1/Amon/pr/gn/v20190710/",
+   "years": [
+    1985,
+    2014
+   ]
+  },
+  {
+   "model": "MPI-ESM1-2-HR",
+   "experiment": "ssp245",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/DKRZ/MPI-ESM1-2-HR/ssp245/r1i1p1f1/Amon/tas/gn/v20190710/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "MPI-ESM1-2-HR",
+   "experiment": "ssp245",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/DKRZ/MPI-ESM1-2-HR/ssp245/r1i1p1f1/Amon/pr/gn/v20190710/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "MPI-ESM1-2-HR",
+   "experiment": "ssp585",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/DKRZ/MPI-ESM1-2-HR/ssp585/r1i1p1f1/Amon/tas/gn/v20190710/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "MPI-ESM1-2-HR",
+   "experiment": "ssp585",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/DKRZ/MPI-ESM1-2-HR/ssp585/r1i1p1f1/Amon/pr/gn/v20190710/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "MRI-ESM2-0",
+   "experiment": "historical",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r1i1p1f1/Amon/tas/gn/v20190222/",
+   "years": [
+    1985,
+    2014
+   ]
+  },
+  {
+   "model": "MRI-ESM2-0",
+   "experiment": "historical",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r1i1p1f1/Amon/pr/gn/v20190222/",
+   "years": [
+    1985,
+    2014
+   ]
+  },
+  {
+   "model": "MRI-ESM2-0",
+   "experiment": "ssp245",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/MRI/MRI-ESM2-0/ssp245/r1i1p1f1/Amon/tas/gn/v20190222/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "MRI-ESM2-0",
+   "experiment": "ssp245",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/MRI/MRI-ESM2-0/ssp245/r1i1p1f1/Amon/pr/gn/v20190222/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "MRI-ESM2-0",
+   "experiment": "ssp585",
+   "variable": "tas",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/MRI/MRI-ESM2-0/ssp585/r1i1p1f1/Amon/tas/gn/v20191108/",
+   "years": [
+    2041,
+    2070
+   ]
+  },
+  {
+   "model": "MRI-ESM2-0",
+   "experiment": "ssp585",
+   "variable": "pr",
+   "member": "r1i1p1f1",
+   "grid": "gn",
+   "zstore": "gs://cmip6/CMIP6/ScenarioMIP/MRI/MRI-ESM2-0/ssp585/r1i1p1f1/Amon/pr/gn/v20191108/",
+   "years": [
+    2041,
+    2070
+   ]
+  }
+ ],
+ "retrieved_utc": "2026-10-24 22:44:46",
+ "regional_change": [
+  {
+   "model": "GFDL-ESM4",
+   "scenario": "ssp245",
+   "dT_annual_mean_C": 1.3,
+   "dP_annual_pct": 1.7
+  },
+  {
+   "model": "GFDL-ESM4",
+   "scenario": "ssp585",
+   "dT_annual_mean_C": 1.93,
+   "dP_annual_pct": -0.1
+  },
+  {
+   "model": "IPSL-CM6A-LR",
+   "scenario": "ssp245",
+   "dT_annual_mean_C": 1.84,
+   "dP_annual_pct": -3.1
+  },
+  {
+   "model": "IPSL-CM6A-LR",
+   "scenario": "ssp585",
+   "dT_annual_mean_C": 2.73,
+   "dP_annual_pct": -4.0
+  },
+  {
+   "model": "MPI-ESM1-2-HR",
+   "scenario": "ssp245",
+   "dT_annual_mean_C": 1.32,
+   "dP_annual_pct": -3.2
+  },
+  {
+   "model": "MPI-ESM1-2-HR",
+   "scenario": "ssp585",
+   "dT_annual_mean_C": 1.8,
+   "dP_annual_pct": -2.4
+  },
+  {
+   "model": "MRI-ESM2-0",
+   "scenario": "ssp245",
+   "dT_annual_mean_C": 1.4,
+   "dP_annual_pct": -0.1
+  },
+  {
+   "model": "MRI-ESM2-0",
+   "scenario": "ssp585",
+   "dT_annual_mean_C": 1.99,
+   "dP_annual_pct": -0.8
+  }
+ ]
+}

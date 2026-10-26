@@ -1,0 +1,21 @@
+{
+ "api": "GBIF maps API v2, occurrence density vector tiles (zoom 2, EPSG:4326)",
+ "years": [
+  2000,
+  2026
+ ],
+ "taxa": {
+  "Alnus glutinosa": {
+   "key": 2876213,
+   "records_in_box": 595678,
+   "occupied_pixels": 36746
+  },
+  "Agelastica alni": {
+   "key": 1047936,
+   "records_in_box": 50866,
+   "occupied_pixels": 10124
+  }
+ },
+ "domain_cells": 5308,
+ "retrieved_utc": "2026-10-25 08:37:05"
+}

@@ -1,0 +1,1 @@
+{ "name": "alderipm-v2-pipeline", "version": "2.0.0", "private": true, "dependencies": { "js-yaml": "^4.1.0" } }

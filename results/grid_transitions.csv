@@ -1,0 +1,16 @@
+scenario,from,to,cells,area_pct
+ssp245,parasitoid_free,parasitoid_free,5067,94.5
+ssp245,parasitoid_free,canopy_only,4,0.1
+ssp245,parasitoid_free,trivial,116,2.6
+ssp245,canopy_only,parasitoid_free,2,0.0
+ssp245,canopy_only,trivial,2,0.0
+ssp245,trivial,parasitoid_free,2,0.0
+ssp245,trivial,canopy_only,1,0.0
+ssp245,trivial,trivial,114,2.6
+ssp585,parasitoid_free,parasitoid_free,4989,92.8
+ssp585,parasitoid_free,canopy_only,5,0.1
+ssp585,parasitoid_free,trivial,193,4.3
+ssp585,canopy_only,parasitoid_free,2,0.0
+ssp585,canopy_only,trivial,2,0.0
+ssp585,trivial,parasitoid_free,3,0.1
+ssp585,trivial,trivial,114,2.6

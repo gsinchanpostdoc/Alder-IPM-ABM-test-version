@@ -1,0 +1,163 @@
+{
+ "beta": {
+  "default": 0.0301,
+  "min": 0.005,
+  "max": 0.04,
+  "unit": "/day",
+  "symbol": "β"
+ },
+ "h": {
+  "default": 0.00575,
+  "min": 0.001,
+  "max": 0.01,
+  "unit": "ha/larva",
+  "symbol": "h"
+ },
+ "c_B": {
+  "default": 0.0209,
+  "min": 0.01,
+  "max": 0.03,
+  "unit": "/day",
+  "symbol": "c_B"
+ },
+ "a_B": {
+  "default": 0.00651,
+  "min": 0.0001,
+  "max": 0.02,
+  "unit": "ha/larva",
+  "symbol": "a_B"
+ },
+ "mu_S": {
+  "default": 0.00423,
+  "min": 0.003,
+  "max": 0.03,
+  "unit": "/day",
+  "symbol": "μ_S"
+ },
+ "mu_I": {
+  "default": 0.0443,
+  "min": 0.02,
+  "max": 0.08,
+  "unit": "/day",
+  "symbol": "μ_I"
+ },
+ "delta": {
+  "default": 0.1918,
+  "min": 0.05,
+  "max": 0.25,
+  "unit": "/day",
+  "symbol": "δ"
+ },
+ "eta": {
+  "default": 0.7054,
+  "min": 0.5,
+  "max": 1,
+  "unit": "dimensionless",
+  "symbol": "η"
+ },
+ "mu_F": {
+  "default": 0.0309,
+  "min": 0.01,
+  "max": 0.08,
+  "unit": "/day",
+  "symbol": "μ_F"
+ },
+ "kappa": {
+  "default": 0.00273,
+  "min": 0.0001,
+  "max": 0.003,
+  "unit": "/day",
+  "symbol": "κ"
+ },
+ "T": {
+  "default": 49.9,
+  "min": 45,
+  "max": 70,
+  "unit": "days",
+  "symbol": "T"
+ },
+ "B_index": {
+  "default": 1.59,
+  "min": 0.5,
+  "max": 2,
+  "unit": "dimensionless",
+  "symbol": "B_idx"
+ },
+ "R_B": {
+  "default": 9.53,
+  "min": 6,
+  "max": 16,
+  "unit": "dimensionless",
+  "symbol": "R_B"
+ },
+ "sigma_A": {
+  "default": 0.781,
+  "min": 0.5,
+  "max": 0.9,
+  "unit": "dimensionless",
+  "symbol": "σ_A"
+ },
+ "sigma_F": {
+  "default": 0.363,
+  "min": 0.3,
+  "max": 0.7,
+  "unit": "dimensionless",
+  "symbol": "σ_F"
+ },
+ "K_0": {
+  "default": 1.712,
+  "min": 1,
+  "max": 2,
+  "unit": "relative units",
+  "symbol": "K_0"
+ },
+ "phi": {
+  "default": 0.0449,
+  "min": 0.01,
+  "max": 0.1,
+  "unit": "dimensionless",
+  "symbol": "φ"
+ },
+ "rho": {
+  "default": 0.5,
+  "min": 0.5,
+  "max": 0.5,
+  "unit": "dimensionless",
+  "symbol": "ρ"
+ },
+ "u_P_max": {
+  "default": 0.5,
+  "min": 0,
+  "max": 1,
+  "unit": "individuals/ha/day",
+  "symbol": "u_P^max"
+ },
+ "u_C_max": {
+  "default": 0.2,
+  "min": 0,
+  "max": 1,
+  "unit": "individuals/ha/day",
+  "symbol": "u_C^max"
+ },
+ "u_B_max": {
+  "default": 1,
+  "min": 0,
+  "max": 2,
+  "unit": "relative units",
+  "symbol": "u_B^max"
+ },
+ "D_crit": {
+  "default": 0.5,
+  "min": 0,
+  "max": 1,
+  "unit": "dimensionless",
+  "symbol": "D_crit"
+ },
+ "K_min": {
+  "default": 0.856,
+  "min": 0,
+  "max": 1,
+  "unit": "relative units",
+  "symbol": "K_min"
+ }
+}
